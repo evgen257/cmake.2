@@ -1,0 +1,54 @@
+#include <cmath>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+struct Point {
+    double x;
+    double y;
+};
+
+void scalpel(const Point& start, const Point& end);
+void hemostat(const Point& point);
+void tweezers(const Point& point);
+void suture(const Point& start, const Point& end);
+
+void scalpel(const Point& start, const Point& end) {
+    cout << "разрез сделан от точки (" << start.x << ", " << start.y << ") до точки (" << end.x << ", " << end.y << ")" << endl;
+}
+
+void hemostat(const Point& point) {
+    cout << "зажим наложен в точке (" << point.x << ", " << point.y << ")" << endl;
+}
+
+void tweezers(const Point& point) {
+    cout << "пинцет используется в точке (" << point.x << ", " << point.y << ")" << endl;
+}
+
+void suture(const Point& start, const Point& end) {
+    cout << "наложен шов от точки (" << start.x << ", " << start.y << ") до точки (" << end.x << ", " << end.y << ")" << endl;
+}
+
+int main() {
+    Point incisionStart, incisionEnd, sutureStart, sutureEnd;
+
+    cout << "введите начальную точку разреза (x, y): ";
+    cin >> incisionStart.x >> incisionStart.y;
+
+    cout << "введите конечную точку разреза (x, y): ";
+    cin >> incisionEnd.x >> incisionEnd.y;
+
+    scalpel(incisionStart, incisionEnd);
+
+    cout << "введите начальную точку шва (x, y): ";
+    cin >> sutureStart.x >> sutureStart.y;
+
+    cout << "введите конечную точку шва (x, y): ";
+    cin >> sutureEnd.x >> sutureEnd.y;
+
+    suture(sutureStart, sutureEnd);
+
+    cout << "операция завершена!" << endl;
+
+    return 0;
