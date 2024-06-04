@@ -1,5 +1,5 @@
 #include <cmath>
-#include <iosream>
+#include <iostream>
 #include <fstream>
 #include <string>
 
@@ -7,7 +7,7 @@ void compute();
 void write(const int* data);
 void read(int* data);
 void save();
-void load();
+void load();f
 void display();
 void input();
 
